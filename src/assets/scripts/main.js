@@ -8,6 +8,7 @@ document.getElementById("toggle__theme").addEventListener("click", function () {
   toggleInvertedClass(".button");
   toggleInvertedClass(".main__ul--ingredients");
   toggleInvertedClass(".underlineh");
+  toggleInvertedClass(".icon");
 });
 
 function toggleInvertedClass(selector) {
