@@ -1,0 +1,227 @@
+/**
+ * Use this file to import partials.
+ * Do not include SCSS code in this file.
+ */
+/**
+ * Import variables
+ */
+/**
+ * Import npm dependencies
+ * see: https://v2.parceljs.org/features/module-resolution/
+ * see commented examples below
+ */
+/**
+ * Import layouts
+ * It's a best practice to use a different partial for each page
+ */
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  margin-bottom: 1rem;
+  align-items: center;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #fff;
+}
+header.inverted {
+  background-color: #b30000;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #b30000;
+  color: #000;
+}
+body.inverted {
+  background-color: #fff;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 1rem;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #b30000;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+button:hover {
+  background-color: maroon;
+}
+button.inverted {
+  background-color: #fff;
+  color: #b30000;
+}
+
+.standard__container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.standard__container.inverted {
+  background-color: #b30000;
+  color: #fff;
+}
+
+.underlineh {
+  font-weight: normal;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #b30000;
+          text-decoration-color: #b30000;
+}
+.underlineh.inverted {
+  -webkit-text-decoration-color: #fff;
+          text-decoration-color: #fff;
+}
+
+.header__title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #b30000;
+  align-items: center;
+}
+@media (min-width: 420px) {
+  .header__title {
+    font-size: 36px;
+  }
+}
+.header__title.inverted {
+  color: #fff;
+}
+
+.section__title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #b30000;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  align-items: center;
+}
+@media (min-width: 420px) {
+  .section__title {
+    font-size: 30px;
+  }
+}
+.section__title.inverted {
+  color: #fff;
+}
+
+.subsection__title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #b30000;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  align-items: center;
+}
+@media (min-width: 420px) {
+  .subsection__title {
+    font-size: 20px;
+  }
+}
+.subsection__title.inverted {
+  color: #fff;
+}
+
+.ingredient__group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+}
+
+.ingredient__group li {
+  width: calc(50% - 2rem);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #b30000;
+  padding: 8px 12px;
+  border-radius: 0.5rem;
+}
+
+ul.ingredient__group.inverted li {
+  border: 1px solid #fff;
+}
+ul.ingredient__group.inverted li span {
+  color: #fff;
+}
+
+.subsection__spec {
+  display: flex;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 2rem;
+  gap: 0.5rem;
+  margin-bottom: 20px;
+}
+.subsection__spec ul {
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+.subsection__spec ol {
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+}
+.subsection__spec ol li {
+  counter-increment: item;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+.subsection__spec ol li::before {
+  content: counter(item) ".";
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.ingredient {
+  color: #b30000;
+}
+
+.quantity {
+  font-style: italic;
+}
+
+.uoc__footer {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+/**
+ * Do NOT include anything else in this file!
+ *//*# sourceMappingURL=main.css.map */
