@@ -6,15 +6,32 @@ header {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  margin: 0 0 1rem;
+  margin: 0;
+  margin-bottom: 1rem;
   align-items: center;
   font-family: $font-family-sans-serif;
   background-color: $color-secondary; 
   position: relative;
-  padding: 2rem 1rem;
 
   &.inverted {
     background-color: $color-secondary-inverted;
+  }
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $color-primary;
+  color: $color-maintext; 
+
+  &.inverted {
+    background-color: $color-primary-inverted;
   }
 }
 
@@ -28,14 +45,13 @@ button {
   background-color: $color-primary;
   color: $color-secondary;
   cursor: pointer;
-  position: absolute;
+  position: absolute; 
   top: 1rem;
   right: 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 14px;
 
+  /* stylelint-disable scss/no-global-function-names */
   &:hover {
-    background-color: darken($color-primary, 10%);
+    background-color: darken($color-primary, 10%); 
   }
 
   &.inverted {
@@ -44,14 +60,39 @@ button {
   }
 }
 
+.standard__container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background-color: $color-secondary;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%),
+    0 2px 4px -1px rgb(0 0 0 / 6%);
+
+    &.inverted {
+      background-color: $color-secondary-inverted;
+      color: $color-primary-inverted;
+    }
+}
+
+.underlineh {
+  font-weight: normal;
+  text-decoration: underline;
+  text-decoration-color: $color-primary;
+
+  &.inverted {
+    text-decoration-color: $color-primary-inverted;
+  }
+}
+
 .header__title {
   font-family: $font-family-serif;
   font-size: 24px;
   font-weight: 700;
   color: $color-primary;
-  text-align: center;
-  max-width: 80%;
-  margin-top: 3rem; // Adjusting spacing so the button doesn't overlap
+  align-items: center;
 
   @media (min-width: $mq-min-width) {
     font-size: 36px;
@@ -62,34 +103,140 @@ button {
   }
 }
 
+.section__title {
+  font-family: $font-family-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: $color-primary;
+  margin-block-start: 0;
+  align-items: center;
+
+  @media (min-width: $mq-min-width) {
+    font-size: 30px;
+  }
+
+  &.inverted {
+    color: $color-primary-inverted;
+  }
+}
+
+.subsection__title {
+  font-family: $font-family-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: $color-primary;
+  margin-block-start: 0;
+  align-items: center;
+
+  @media (min-width: $mq-min-width) {
+    font-size: 20px;
+  }
+
+  &.inverted {
+    color: $color-primary-inverted;
+  }
+}
+
 .ingredient__group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
   list-style: none;
   padding: 0;
-  gap: 0.5rem;
+  align-items: center;
 }
 
 .ingredient__group li {
-  width: 100%;
-  max-width: 400px; // Limits width for readability
+  width: calc(50% - 2rem);
   align-items: center;
   display: flex;
   justify-content: space-between;
   border: 2px solid $color-primary;
   padding: 8px 12px;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
+
 }
 
-@media (min-width: 600px) {
+ul.ingredient__group.inverted li {
+  border: 1px solid $color-primary-inverted;
+
+  span {
+    color: $color-primary-inverted;
+  }
+}
+
+.subsection__spec {
+  display: flex;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 2rem;
+  gap: 0.5rem;
+  margin-bottom: 20px;
+
+  ul {
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline-start: 0;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: item; 
+    padding: 0;
+  
+    /* stylelint-disable no-descending-specificity */
+    li {
+      counter-increment: item; 
+      margin-bottom: 1.5rem; 
+      position: relative;
+      padding-left: 2rem; 
+
+      &::before {
+        content: counter(item) ".";
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+    } /* stylelint-enable no-descending-specificity */
+  }
+}
+
+.ingredient {
+color: $color-primary;
+}
+
+.quantity {
+  font-style: italic;
+}
+
+.uoc__footer {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) { //new - only apply changes on mobile
+  .header__title {
+    text-align: center; //new
+    max-width: 80%; //new
+    margin-top: 3rem; //new - prevents button overlap
+  }
+
+  button {
+    padding: 0.5rem 1rem; //new
+    font-size: 14px; //new
+  }
+
   .ingredient__group {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column; //new
+    align-items: center; //new
   }
 
   .ingredient__group li {
-    width: calc(50% - 1rem);
+    width: 100%; //new
+    max-width: 400px; //new - improves readability
   }
 }
