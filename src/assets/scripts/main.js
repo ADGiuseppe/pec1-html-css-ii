@@ -1,12 +1,12 @@
 document.getElementById("toggle__theme").addEventListener("click", function () {
   toggleInvertedClass(".body");
   toggleInvertedClass(".header");
-  toggleInvertedClass(".section__title");
-  toggleInvertedClass(".subsection__title");
+  toggleInvertedClass(".main__title");
+  toggleInvertedClass(".submain__title");
   toggleInvertedClass(".header__title");
-  toggleInvertedClass(".standard__container");
+  toggleInvertedClass(".main__div");
   toggleInvertedClass(".button");
-  toggleInvertedClass(".ingredient__group");
+  toggleInvertedClass(".main__ul--ingredients");
   toggleInvertedClass(".underlineh");
 });
 

@@ -69,7 +69,7 @@ button.inverted {
   color: #b30000;
 }
 
-.standard__container {
+.main__div {
   max-width: 800px;
   margin: auto;
   padding: 2rem;
@@ -79,7 +79,7 @@ button.inverted {
   background-color: #fff;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
-.standard__container.inverted {
+.main__div.inverted {
   background-color: #b30000;
   color: #fff;
 }
@@ -111,7 +111,7 @@ button.inverted {
   color: #fff;
 }
 
-.section__title {
+.main__title {
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 24px;
   font-weight: 700;
@@ -121,15 +121,15 @@ button.inverted {
   align-items: center;
 }
 @media (min-width: 420px) {
-  .section__title {
+  .main__title {
     font-size: 30px;
   }
 }
-.section__title.inverted {
+.main__title.inverted {
   color: #fff;
 }
 
-.subsection__title {
+.submain__title {
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 15px;
   font-weight: 500;
@@ -139,15 +139,15 @@ button.inverted {
   align-items: center;
 }
 @media (min-width: 420px) {
-  .subsection__title {
+  .submain__title {
     font-size: 20px;
   }
 }
-.subsection__title.inverted {
+.submain__title.inverted {
   color: #fff;
 }
 
-.ingredient__group {
+.main__ul--ingredients {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -157,7 +157,7 @@ button.inverted {
   align-items: center;
 }
 
-.ingredient__group li {
+.main__ul--ingredients li {
   width: calc(50% - 2rem);
   align-items: center;
   display: flex;
@@ -167,14 +167,14 @@ button.inverted {
   border-radius: 0.5rem;
 }
 
-ul.ingredient__group.inverted li {
+ul.main__ul--ingredients.inverted li {
   border: 1px solid #fff;
 }
-ul.ingredient__group.inverted li span {
+ul.main__ul--ingredients.inverted li span {
   color: #fff;
 }
 
-.subsection__spec {
+.main__div--details {
   display: flex;
   align-content: center;
   text-align: center;
@@ -183,25 +183,25 @@ ul.ingredient__group.inverted li span {
   gap: 0.5rem;
   margin-bottom: 20px;
 }
-.subsection__spec ul {
+.main__div--details ul {
   list-style-type: none;
   margin-left: auto;
   margin-right: auto;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
 }
-.subsection__spec ol {
+.main__div--details ol {
   list-style: none;
   counter-reset: item;
   padding: 0;
 }
-.subsection__spec ol li {
+.main__div--details ol li {
   counter-increment: item;
   margin-bottom: 1.5rem;
   position: relative;
   padding-left: 2rem;
 }
-.subsection__spec ol li::before {
+.main__div--details ol li::before {
   content: counter(item) ".";
   font-weight: bold;
   position: absolute;
